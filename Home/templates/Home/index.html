@@ -1,5 +1,4 @@
 {% load static %}
-<!DOCTYPE html>
 <html lang="zh-CN">
     <head>
         <meta charset="utf-8">
@@ -45,6 +44,8 @@
                             <tr>
                                 {% if task.task_status == 'F' %}
                                     <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+                                {% elif task.task_status == 'E' %}
+                                    <td><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span></td>
                                 {% else %}
                                     <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
                                 {% endif %}
